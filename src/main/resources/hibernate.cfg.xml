@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">  
+  
+<hibernate-configuration>  
+  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>  
+        <property name="connection.driver_class">org.postgresql.Driver</property> 
+        <property name="connection.url">jdbc:postgresql://daedalus.gajur.pl:6666/projekt</property>  
+        <property name="connection.username">przemo</property>  
+        <property name="connection.password">cipa</property>          
+        <property name="connection_pool_size">1</property> 
+        <property name="show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="auto_commit">true</property>
+        
+        
+    <mapping class="org.hibernate.HibernateProjekt.entities.Adres"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.id_zamowienia_klienta"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Klient"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Pracownik"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Przedmiot"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Specyfikacja_przedmiotu"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Uzytkownicy"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Zamowienia_klient"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Zamowienia_sklep"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.zamowienie_klienta"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.zaopatrzenie_przedmioty"/>
+    <mapping class="org.hibernate.HibernateProjekt.entities.Zaopatrzenie"/>
+    </session-factory>  
+  
+</hibernate-configuration>  
